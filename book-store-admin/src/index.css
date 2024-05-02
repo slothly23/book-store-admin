@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo:wght@400;700&family=Titillium+Web:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -35,11 +36,12 @@ html {
 
 body {
   margin: 0;
+  background-color: var(--secondary-color);
 }
 
 /* font setting */
 .heading1 {
-  font-family: var(--heading-font);
+  font-family: var(--paragraph-font);
   font-size: var(--h1-font-size);
   font-weight: 700;
 }
@@ -79,5 +81,41 @@ body {
 }
 
 .dark {
+  color: var(--black-color);
+}
+
+
+.tableHeader {
+  @apply bg-gray-50
+}
+
+.tableCol {
+  @apply px-4 py-3.5 text-sm text-center dark align-middle paragraph-regular border-2;
+}
+
+.tableData {
+  @apply px-4 py-4 text-sm dark text-center border-2
+}
+
+.btnPrimary {
+  @apply my-3 rounded-md bg-emerald-600 py-2 px-3 paragraph-regular white 
+  transition-all delay-200 hover:bg-gray-500;
+}
+
+.btnReset {
+  @apply my-3 rounded-md bg-[#f59f6d] py-2 px-3 paragraph-regular white 
+  transition-all delay-200 hover:bg-gray-500;
+}
+
+/* input form */
+.input-text {
+  @apply w-auto h-10 pl-4 border-2;
+  color: var(--black-color);
+}
+
+.label-form {
+  @apply mb-1.5 mt-4 font-bold;
+  font-family: var(--paragraph-font);
+  font-size: var(--h3-font-size);
   color: var(--black-color);
 }
